@@ -1,17 +1,17 @@
-let header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('shadow', window.scrollY > 0);
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("shadow", window.scrollY > 0);
 });
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 menu.onclick = () => {
-  menu.classList.toggle('bx-x');
-  navbar.classList.toggle('active');
-}
+  menu.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
 window.onscroll = () => {
-  menu.classList.remove('bx-x');
-  navbar.classList.remove('active');
-}
+  menu.classList.remove("bx-x");
+  navbar.classList.remove("active");
+};
 var swiper = new Swiper(".home", {
   loop: true,
   autoplay: {
@@ -54,22 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = btn.dataset.title;
     if (localStorage.getItem(title) === "true") {
       btn.classList.add("active");
-      btn.textContent = "❤️";
+      btn.textContent = "❤";
     }
 
     btn.addEventListener("click", () => {
       btn.classList.toggle("active");
       const isFavorite = btn.classList.contains("active");
-      btn.textContent = isFavorite ? "❤️" : "♡";
+      btn.textContent = isFavorite ? "❤" : "♡";
       localStorage.setItem(title, isFavorite);
     });
   });
 });
- function showForm() {
-   document.getElementById("loginForm").style.display = "block";
- }
- function hideForm() {
-   document.getElementById("loginForm").style.display = "none";
- }
-
-
+function showForm() {
+  document.getElementById("loginForm").style.display = "block";
+}
+function hideForm() {
+  document.getElementById("loginForm").style.display = "none";
+}
